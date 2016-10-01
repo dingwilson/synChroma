@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChromaMessengerViewController.swift
 //  synChroma
 //
 //  Created by Wilson Ding on 10/1/16.
@@ -8,18 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ChromaMessengerViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
-

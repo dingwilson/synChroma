@@ -7,21 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C89DC0741DA0755F002DE6CF /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89DC06F1DA074F3002DE6CF /* GPUImage.framework */; };
+		C89DC0761DA075E6002DE6CF /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C89DC06F1DA074F3002DE6CF /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D407091DA030C1003C826A /* AppDelegate.swift */; };
-		C8D4070C1DA030C1003C826A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D4070B1DA030C1003C826A /* ViewController.swift */; };
 		C8D4070F1DA030C1003C826A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D4070D1DA030C1003C826A /* Main.storyboard */; };
 		C8D407111DA030C1003C826A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D407101DA030C1003C826A /* Assets.xcassets */; };
 		C8D407141DA030C1003C826A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D407121DA030C1003C826A /* LaunchScreen.storyboard */; };
+		C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C89DC06E1DA074F3002DE6CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCD1B1251C66A262001F2BDC;
+			remoteInfo = GPUImage;
+		};
+		C89DC0701DA074F3002DE6CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCD1B12F1C66A262001F2BDC;
+			remoteInfo = GPUImageTests;
+		};
+		C89DC0721DA07553002DE6CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD1B1241C66A262001F2BDC;
+			remoteInfo = GPUImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C89DC0751DA075D2002DE6CF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C89DC0761DA075E6002DE6CF /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "../../../Downloads/GPUImage2-master/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
 		C8D407061DA030C1003C826A /* synChroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synChroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D407091DA030C1003C826A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8D4070B1DA030C1003C826A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8D4070E1DA030C1003C826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8D407101DA030C1003C826A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D407131DA030C1003C826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D407151DA030C1003C826A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromaMessengerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,15 +69,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C89DC0741DA0755F002DE6CF /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C89DC06A1DA074F3002DE6CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C89DC06F1DA074F3002DE6CF /* GPUImage.framework */,
+				C89DC0711DA074F3002DE6CF /* GPUImageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C8D406FD1DA030C0003C826A = {
 			isa = PBXGroup;
 			children = (
+				C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */,
 				C8D407081DA030C1003C826A /* synChroma */,
 				C8D407071DA030C1003C826A /* Products */,
 			);
@@ -55,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D407091DA030C1003C826A /* AppDelegate.swift */,
-				C8D4070B1DA030C1003C826A /* ViewController.swift */,
+				C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */,
 				C8D4070D1DA030C1003C826A /* Main.storyboard */,
 				C8D407101DA030C1003C826A /* Assets.xcassets */,
 				C8D407121DA030C1003C826A /* LaunchScreen.storyboard */,
@@ -74,10 +125,12 @@
 				C8D407021DA030C0003C826A /* Sources */,
 				C8D407031DA030C0003C826A /* Frameworks */,
 				C8D407041DA030C0003C826A /* Resources */,
+				C89DC0751DA075D2002DE6CF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C89DC0731DA07553002DE6CF /* PBXTargetDependency */,
 			);
 			name = synChroma;
 			productName = synChroma;
@@ -112,12 +165,35 @@
 			mainGroup = C8D406FD1DA030C0003C826A;
 			productRefGroup = C8D407071DA030C1003C826A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C89DC06A1DA074F3002DE6CF /* Products */;
+					ProjectRef = C89DC0691DA074F3002DE6CF /* GPUImage-iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C8D407051DA030C0003C826A /* synChroma */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C89DC06F1DA074F3002DE6CF /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = C89DC06E1DA074F3002DE6CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C89DC0711DA074F3002DE6CF /* GPUImageTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.xctest;
+			remoteRef = C89DC0701DA074F3002DE6CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C8D407041DA030C0003C826A /* Resources */ = {
@@ -137,12 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D4070C1DA030C1003C826A /* ViewController.swift in Sources */,
+				C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */,
 				C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C89DC0731DA07553002DE6CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = C89DC0721DA07553002DE6CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C8D4070D1DA030C1003C826A /* Main.storyboard */ = {
@@ -302,6 +386,7 @@
 				C8D4071A1DA030C1003C826A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
