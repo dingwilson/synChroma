@@ -96,10 +96,8 @@ class SyncRouteViewController: UIViewController{
     }
     
     func sendToGoogleMaps() {
-//        let destLatitude="26.9124"
-//        let destLongitude="75.7873"
-//        mapView.isMyLocationEnabled = true
-//        var urlString = "\("https://maps.googleapis.com/maps/api/directions/json")?origin=\("28.7041"),\("77.1025")&destination=\(destLatitude),\(destLongitude)&sensor=true&key=\("Your-Api-key")"
+//        apiKey = "AIzaSyDMS6wFyJYTetjrYuRre1e_DTppRvf6eeY"
+//        var urlString = "\("https://maps.googleapis.com/maps/api/directions/json")?origin=\(startLat),\(startLong)&destination=\(destLatitude),\(destLongitude)&sensor=true&key=\(apiKey)"
 //        
 //        urlString = urlString.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)!
 //        

@@ -41,9 +41,13 @@ class ChromaMessengerViewController: UIViewController {
         let cropFilter = GPUImageCropFilter()
         cropFilter.cropRegion = CGRect(x: 0.35, y: 0.35, width: 0.3, height: 0.3)
         
+        let medianFilter = GPUImageMedianFilter()
+        
+        cropFilter.addTarget(medianFilter)
+        
         let averageColorFilter = GPUImageAverageColor()
         
-        cropFilter.addTarget(averageColorFilter)
+        medianFilter.addTarget(averageColorFilter)
         
         averageColorFilter.colorAverageProcessingFinishedBlock = {(redComponent, greenComponent, blueComponent, alphaComponent, frameTime) in
 
