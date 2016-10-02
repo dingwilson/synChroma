@@ -23,7 +23,7 @@ class ChromaMessengerViewController: UIViewController {
     }
     
     func setupCamera() {
-        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset1280x720, cameraPosition: .back)
+        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset640x480, cameraPosition: .back)
         videoCamera!.outputImageOrientation = .portrait
         
         do {
