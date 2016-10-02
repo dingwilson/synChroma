@@ -11,6 +11,8 @@ import MapKit
 import AFNetworking
 import SwiftyJSON
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 protocol HandleMapSearch: class {
     func findLocation(placemark:MKPlacemark)
@@ -21,8 +23,18 @@ class SyncRouteViewController: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var selectionButton: UIButton!
+    @IBOutlet weak var myview: UIView!
     
     let mapSpan = 0.01
+    
+    let v = "54510212510202"
+    var currentInt = 0
+
+    var timer = Timer()
+    
+    var ref: FIRDatabaseReference!
+    
+    var link = ""
     
     var locationManager: CLLocationManager! = CLLocationManager()
     var geoCoder: CLGeocoder! = CLGeocoder()
@@ -32,6 +44,8 @@ class SyncRouteViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myview.isHidden = true;
         
         getLocation()
     }
@@ -45,13 +59,9 @@ class SyncRouteViewController: UIViewController{
         self.endLat = self.mapView.centerCoordinate.latitude
         self.endLong = self.mapView.centerCoordinate.longitude
         
-        generateColor()
-    }
-    
-    func generateColor() {
-        //Add Color
-        
-        sendToGoogleMaps()
+        myview.isHidden = false;
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(SyncRouteViewController.color), userInfo: nil, repeats: true)
+        var closerTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(SyncRouteViewController.stopTimer), userInfo: nil, repeats: false)
     }
     
     func getLocation() {
@@ -107,20 +117,62 @@ class SyncRouteViewController: UIViewController{
     func sendToGoogleMaps() {
         let testURL = NSURL(string: "comgooglemaps-x-callback://")!
         if UIApplication.shared.canOpenURL(testURL as URL) {
-            let directionsRequest = "comgooglemaps-x-callback://" +
-                "?saddr=&daddr=\(endLat),\(endLong)&directionsmode=walking"
-            
-            let directionsURL = NSURL(string: directionsRequest)!
+            link = "comgooglemaps-x-callback://?saddr=&daddr=\(endLat),\(endLong)&directionsmode=walking"
+            sendToFB(string: link)
+            recieveFromFB()
+            let directionsURL = NSURL(string: link)!
             UIApplication.shared.openURL(directionsURL as URL)
         } else {
             NSLog("Can't use comgooglemaps-x-callback:// on this device.")
         }
-        
-        
-        
-        
-        UIApplication.shared.canOpenURL(
-            NSURL(string: "comgooglemaps://?saddr=\(startLat),\(startLong),\(endLat),\(endLong)&directionsmode=transit")! as URL)
+    }
+    
+    func stopTimer() {
+        timer.invalidate();
+        myview.isHidden = true;
+        sendToGoogleMaps()
+    }
+    
+    func color(){
+        if (currentInt >= v.characters.count) {
+            currentInt = 0;
+        } else {
+            let temp = v[v.index(v.startIndex, offsetBy: currentInt)];
+            
+            if (currentInt > v.characters.count) {
+                timer.invalidate();
+            }
+            
+            currentInt+=1;
+            if (temp == "5") {
+                myview.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0)
+            } else if (temp == "4") {
+                myview.backgroundColor = UIColor(red: 255.0/255, green: 255.0/255, blue: 255.0/255, alpha: 1.0)
+            }
+            else if (temp == "2") {
+                myview.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 255.0/255, alpha: 1.0)
+            }
+            else if (temp == "1") {
+                myview.backgroundColor = UIColor(red: 0.0/255, green: 255.0/255, blue: 0.0/255, alpha: 1.0)
+            }
+            else if (temp == "0") {
+                myview.backgroundColor = UIColor(red: 255.0/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0)
+            }
+            print("howdy")
+        }
+    }
+    
+    func sendToFB(string: String) {
+        let post = ["read": "test"]
+        let childUpdates = ["posts/": string]
+        ref.updateChildValues(childUpdates)
+    }
+    
+    func recieveFromFB() {
+        var refHandle = ref.observe(FIRDataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as! [String : AnyObject]
+            self.link = postDict["posts"]!["read"]!! as! String
+        })
     }
 }
 

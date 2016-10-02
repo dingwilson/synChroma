@@ -10,5 +10,7 @@ target 'synChroma' do
   pod 'SwiftyJSON', '3.0.0'
   pod 'AFNetworking', '~> 3.0'
   pod 'GoogleMaps'
+  pod 'Firebase'
+  pod 'Firebase/Database'
 
 end

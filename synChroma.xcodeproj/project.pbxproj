@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30FE0D1C506AE6E405901EC8 /* Pods_synChroma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5ECA36F7F32AB2FC81007 /* Pods_synChroma.framework */; };
+		C83F6AB91DA16676005E56EB /* SyncPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F6AB81DA16676005E56EB /* SyncPayViewController.swift */; };
 		C86B370A1DA08B24002DD4EC /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8FB9CD71DA08AA800FBB7A8 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8CBF1271DA1553C001F7924 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8CBF1261DA1553C001F7924 /* GoogleService-Info.plist */; };
 		C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D407091DA030C1003C826A /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		854C2D2545142308430E23BC /* Pods-synChroma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-synChroma.release.xcconfig"; path = "Pods/Target Support Files/Pods-synChroma/Pods-synChroma.release.xcconfig"; sourceTree = "<group>"; };
 		A4B5ECA36F7F32AB2FC81007 /* Pods_synChroma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_synChroma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83F6AB81DA16676005E56EB /* SyncPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncPayViewController.swift; sourceTree = "<group>"; };
 		C8CBF1261DA1553C001F7924 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8D407061DA030C1003C826A /* synChroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synChroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D407091DA030C1003C826A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				C8E183061DA0E86A001F8D62 /* LoginViewController.swift */,
 				C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */,
 				C8E1830A1DA10268001F8D62 /* SyncRouteViewController.swift */,
+				C83F6AB81DA16676005E56EB /* SyncPayViewController.swift */,
 				C8DA33DD1DA105A000731F18 /* LocationSearchTable.swift */,
 				C8D4070D1DA030C1003C826A /* Main.storyboard */,
 				C8D407101DA030C1003C826A /* Assets.xcassets */,
@@ -309,6 +312,7 @@
 				C8DA33DE1DA105A000731F18 /* LocationSearchTable.swift in Sources */,
 				C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */,
 				C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */,
+				C83F6AB91DA16676005E56EB /* SyncPayViewController.swift in Sources */,
 				C8E1830B1DA10268001F8D62 /* SyncRouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
