@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30FE0D1C506AE6E405901EC8 /* Pods_synChroma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5ECA36F7F32AB2FC81007 /* Pods_synChroma.framework */; };
 		C86B370A1DA08B24002DD4EC /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8FB9CD71DA08AA800FBB7A8 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D407091DA030C1003C826A /* AppDelegate.swift */; };
 		C8D4070F1DA030C1003C826A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D4070D1DA030C1003C826A /* Main.storyboard */; };
 		C8D407111DA030C1003C826A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D407101DA030C1003C826A /* Assets.xcassets */; };
 		C8D407141DA030C1003C826A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D407121DA030C1003C826A /* LaunchScreen.storyboard */; };
 		C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */; };
+		C8E183031DA0E841001F8D62 /* Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8E183021DA0E841001F8D62 /* Background.mp4 */; };
+		C8E183071DA0E86A001F8D62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E183061DA0E86A001F8D62 /* LoginViewController.swift */; };
 		C8FB9CDC1DA08AFF00FBB7A8 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FB9CD71DA08AA800FBB7A8 /* GPUImage.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		854C2D2545142308430E23BC /* Pods-synChroma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-synChroma.release.xcconfig"; path = "Pods/Target Support Files/Pods-synChroma/Pods-synChroma.release.xcconfig"; sourceTree = "<group>"; };
+		A4B5ECA36F7F32AB2FC81007 /* Pods_synChroma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_synChroma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D407061DA030C1003C826A /* synChroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synChroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D407091DA030C1003C826A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D4070E1DA030C1003C826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +66,10 @@
 		C8D407131DA030C1003C826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D407151DA030C1003C826A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromaMessengerViewController.swift; sourceTree = "<group>"; };
+		C8E183021DA0E841001F8D62 /* Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.mp4; sourceTree = "<group>"; };
+		C8E183061DA0E86A001F8D62 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8FB9CCE1DA08AA700FBB7A8 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../Downloads/GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
+		ECA9E6FF1B8223FD38C29D84 /* Pods-synChroma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-synChroma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-synChroma/Pods-synChroma.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +78,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FB9CDC1DA08AFF00FBB7A8 /* GPUImage.framework in Frameworks */,
+				30FE0D1C506AE6E405901EC8 /* Pods_synChroma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF243E08EF8810F9802EF3C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECA9E6FF1B8223FD38C29D84 /* Pods-synChroma.debug.xcconfig */,
+				854C2D2545142308430E23BC /* Pods-synChroma.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C8D406FD1DA030C0003C826A = {
 			isa = PBXGroup;
 			children = (
 				C8FB9CCE1DA08AA700FBB7A8 /* GPUImage.xcodeproj */,
 				C8D407081DA030C1003C826A /* synChroma */,
 				C8D407071DA030C1003C826A /* Products */,
+				BF243E08EF8810F9802EF3C4 /* Pods */,
+				E92B3E7216D8ED3F56578D77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +117,13 @@
 			isa = PBXGroup;
 			children = (
 				C8D407091DA030C1003C826A /* AppDelegate.swift */,
+				C8E183061DA0E86A001F8D62 /* LoginViewController.swift */,
 				C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */,
 				C8D4070D1DA030C1003C826A /* Main.storyboard */,
 				C8D407101DA030C1003C826A /* Assets.xcassets */,
 				C8D407121DA030C1003C826A /* LaunchScreen.storyboard */,
 				C8D407151DA030C1003C826A /* Info.plist */,
+				C8E183021DA0E841001F8D62 /* Background.mp4 */,
 			);
 			path = synChroma;
 			sourceTree = "<group>";
@@ -115,6 +137,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E92B3E7216D8ED3F56578D77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5ECA36F7F32AB2FC81007 /* Pods_synChroma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +152,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8D407181DA030C1003C826A /* Build configuration list for PBXNativeTarget "synChroma" */;
 			buildPhases = (
+				9FD4C3FAC6B4CF17A4E708B8 /* [CP] Check Pods Manifest.lock */,
 				C8D407021DA030C0003C826A /* Sources */,
 				C8D407031DA030C0003C826A /* Frameworks */,
 				C8D407041DA030C0003C826A /* Resources */,
 				C86B37071DA08B1C002DD4EC /* CopyFiles */,
+				C5BB5AE994678FE91DF8EEE7 /* [CP] Embed Pods Frameworks */,
+				E4A503B3D1A0E7E2143DFC66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8D407141DA030C1003C826A /* LaunchScreen.storyboard in Resources */,
+				C8E183031DA0E841001F8D62 /* Background.mp4 in Resources */,
 				C8D407111DA030C1003C826A /* Assets.xcassets in Resources */,
 				C8D4070F1DA030C1003C826A /* Main.storyboard in Resources */,
 			);
@@ -208,11 +242,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FD4C3FAC6B4CF17A4E708B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5BB5AE994678FE91DF8EEE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-synChroma/Pods-synChroma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4A503B3D1A0E7E2143DFC66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-synChroma/Pods-synChroma-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8D407021DA030C0003C826A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E183071DA0E86A001F8D62 /* LoginViewController.swift in Sources */,
 				C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */,
 				C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */,
 			);
@@ -343,6 +426,7 @@
 		};
 		C8D407191DA030C1003C826A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA9E6FF1B8223FD38C29D84 /* Pods-synChroma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 585SNYAD83;
@@ -356,6 +440,7 @@
 		};
 		C8D4071A1DA030C1003C826A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854C2D2545142308430E23BC /* Pods-synChroma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 585SNYAD83;

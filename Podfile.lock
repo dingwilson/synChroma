@@ -1,0 +1,12 @@
+PODS:
+  - SwiftVideoBackground (0.04)
+
+DEPENDENCIES:
+  - SwiftVideoBackground
+
+SPEC CHECKSUMS:
+  SwiftVideoBackground: c0253281fcda5047c36067cbb852d8061513058b
+
+PODFILE CHECKSUM: d53998bdae0662bf2716691335c82d1e6ba572d5
+
+COCOAPODS: 1.1.0.rc.2
