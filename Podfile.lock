@@ -14,19 +14,26 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
   - SwiftVideoBackground (0.04)
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - GoogleMaps
   - SwiftVideoBackground
   - SwiftyJSON (= 3.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  GoogleMaps: '06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c'
   SwiftVideoBackground: c0253281fcda5047c36067cbb852d8061513058b
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 2aa032438bfbee0531b72cdf58d9aed7940ee370
+PODFILE CHECKSUM: f23591bdcbb660fb56bcbd804c413bdf799b4350
 
 COCOAPODS: 1.1.0.rc.2

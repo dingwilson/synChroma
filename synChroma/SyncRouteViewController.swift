@@ -8,6 +8,9 @@
 
 import UIKit
 import MapKit
+import AFNetworking
+import SwiftyJSON
+import GoogleMaps
 
 protocol HandleMapSearch: class {
     func findLocation(placemark:MKPlacemark)
@@ -41,6 +44,12 @@ class SyncRouteViewController: UIViewController{
         
         self.endLat = self.mapView.centerCoordinate.latitude
         self.endLong = self.mapView.centerCoordinate.longitude
+        
+        generateColor()
+    }
+    
+    func generateColor() {
+        //Add Color
         
         sendToGoogleMaps()
     }
@@ -96,45 +105,22 @@ class SyncRouteViewController: UIViewController{
     }
     
     func sendToGoogleMaps() {
-//        apiKey = "AIzaSyDMS6wFyJYTetjrYuRre1e_DTppRvf6eeY"
-//        var urlString = "\("https://maps.googleapis.com/maps/api/directions/json")?origin=\(startLat),\(startLong)&destination=\(destLatitude),\(destLongitude)&sensor=true&key=\(apiKey)"
-//        
-//        urlString = urlString.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)!
-//        
-//        let manager=AFHTTPRequestOperationManager()
-//        
-//        manager.responseSerializer = AFJSONResponseSerializer(readingOptions: JSONSerialization.ReadingOptions.allowFragments) as AFJSONResponseSerializer
-//        
-//        manager.requestSerializer = AFJSONRequestSerializer() as AFJSONRequestSerializer
-//        
-//        manager.responseSerializer.acceptableContentTypes = NSSet(objects:"application/json", "text/html", "text/plain", "text/json", "text/javascript", "audio/wav") as Set<NSObject>
-//        
-//        
-//        manager.post(urlString, parameters: nil, constructingBodyWith: { (formdata:AFMultipartFormData!) -> Void in
-//            
-//            }, success: {  operation, response -> Void in
-//                //{"responseString" : "Success","result" : {"userId" : "4"},"errorCode" : 1}
-//                //if(response != nil){
-//                let parsedData = JSON(response)
-//                print_debug("parsedData : \(parsedData)")
-//                var path = GMSPath.init(fromEncodedPath: parsedData["routes"][0]["overview_polyline"]["points"].string!)
-//                //GMSPath.fromEncodedPath(parsedData["routes"][0]["overview_polyline"]["points"].string!)
-//                var singleLine = GMSPolyline.init(path: path)
-//                singleLine.strokeWidth = 7
-//                singleLine.strokeColor = UIColor.green
-//                singleLine.map = self.mapView
-//                //let loginResponeObj=LoginRespone.init(fromJson: parsedData)
-//                
-//                
-//                //  }
-//            }, failure: {  operation, error -> Void in
-//                
-//                print_debug(error)
-//                let errorDict = NSMutableDictionary()
-//                errorDict.setObject(ErrorCodes.errorCodeFailed.rawValue, forKey: ServiceKeys.keyErrorCode.rawValue as NSCopying)
-//                errorDict.setObject(ErrorMessages.errorTryAgain.rawValue, forKey: ServiceKeys.keyErrorMessage.rawValue as NSCopying)
-//                
-//        })
+        let testURL = NSURL(string: "comgooglemaps-x-callback://")!
+        if UIApplication.shared.canOpenURL(testURL as URL) {
+            let directionsRequest = "comgooglemaps-x-callback://" +
+                "?saddr=&daddr=\(endLat),\(endLong)&directionsmode=walking"
+            
+            let directionsURL = NSURL(string: directionsRequest)!
+            UIApplication.shared.openURL(directionsURL as URL)
+        } else {
+            NSLog("Can't use comgooglemaps-x-callback:// on this device.")
+        }
+        
+        
+        
+        
+        UIApplication.shared.canOpenURL(
+            NSURL(string: "comgooglemaps://?saddr=\(startLat),\(startLong),\(endLat),\(endLong)&directionsmode=transit")! as URL)
     }
 }
 

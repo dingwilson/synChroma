@@ -22,6 +22,20 @@ class ChromaMessengerViewController: UIViewController {
         setupCamera()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        videoCamera!.startCapture()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if videoCamera != nil {
+            videoCamera!.stopCapture()
+        }
+    }
+    
     func setupCamera() {
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset640x480, cameraPosition: .back)
         videoCamera!.outputImageOrientation = .portrait
