@@ -14,8 +14,10 @@
 		C8D407111DA030C1003C826A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D407101DA030C1003C826A /* Assets.xcassets */; };
 		C8D407141DA030C1003C826A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D407121DA030C1003C826A /* LaunchScreen.storyboard */; };
 		C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */; };
+		C8DA33DE1DA105A000731F18 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA33DD1DA105A000731F18 /* LocationSearchTable.swift */; };
 		C8E183031DA0E841001F8D62 /* Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8E183021DA0E841001F8D62 /* Background.mp4 */; };
 		C8E183071DA0E86A001F8D62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E183061DA0E86A001F8D62 /* LoginViewController.swift */; };
+		C8E1830B1DA10268001F8D62 /* SyncRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1830A1DA10268001F8D62 /* SyncRouteViewController.swift */; };
 		C8FB9CDC1DA08AFF00FBB7A8 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FB9CD71DA08AA800FBB7A8 /* GPUImage.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +68,10 @@
 		C8D407131DA030C1003C826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D407151DA030C1003C826A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromaMessengerViewController.swift; sourceTree = "<group>"; };
+		C8DA33DD1DA105A000731F18 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		C8E183021DA0E841001F8D62 /* Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.mp4; sourceTree = "<group>"; };
 		C8E183061DA0E86A001F8D62 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C8E1830A1DA10268001F8D62 /* SyncRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncRouteViewController.swift; sourceTree = "<group>"; };
 		C8FB9CCE1DA08AA700FBB7A8 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../Downloads/GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		ECA9E6FF1B8223FD38C29D84 /* Pods-synChroma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-synChroma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-synChroma/Pods-synChroma.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,8 @@
 				C8D407091DA030C1003C826A /* AppDelegate.swift */,
 				C8E183061DA0E86A001F8D62 /* LoginViewController.swift */,
 				C8D4071B1DA036EF003C826A /* ChromaMessengerViewController.swift */,
+				C8E1830A1DA10268001F8D62 /* SyncRouteViewController.swift */,
+				C8DA33DD1DA105A000731F18 /* LocationSearchTable.swift */,
 				C8D4070D1DA030C1003C826A /* Main.storyboard */,
 				C8D407101DA030C1003C826A /* Assets.xcassets */,
 				C8D407121DA030C1003C826A /* LaunchScreen.storyboard */,
@@ -296,8 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E183071DA0E86A001F8D62 /* LoginViewController.swift in Sources */,
+				C8DA33DE1DA105A000731F18 /* LocationSearchTable.swift in Sources */,
 				C8D4071C1DA036EF003C826A /* ChromaMessengerViewController.swift in Sources */,
 				C8D4070A1DA030C1003C826A /* AppDelegate.swift in Sources */,
+				C8E1830B1DA10268001F8D62 /* SyncRouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
