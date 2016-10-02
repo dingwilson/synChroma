@@ -38,7 +38,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ZkG-IM-NeK"/>
+                                    <segue destination="ugZ-p4-iWr" kind="show" id="7RA-Hv-YcY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="synChroma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sB-57-dES">
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-852" y="37.331334332833585"/>
         </scene>
-        <!--Chroma Messenger View Controller-->
+        <!--synChrome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ChromaMessengerViewController" customModule="synChroma" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,10 +89,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="synChrome" image="camera-video" id="rne-Mb-cey"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1206" y="-673"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lHB-Ug-hzw">
+            <objects>
+                <tabBarController id="ugZ-p4-iWr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Pdc-g2-Fyi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Mvr-Wb-MiY"/>
+                        <segue destination="bYI-VS-aGp" kind="relationship" relationship="viewControllers" id="pP2-Bx-CBh"/>
+                        <segue destination="mZr-Ln-0uT" kind="relationship" relationship="viewControllers" id="s1f-sC-Toe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71d-sn-hkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="37"/>
+        </scene>
+        <!--syncTransfer-->
+        <scene sceneID="1r4-vb-GQr">
+            <objects>
+                <viewController id="bYI-VS-aGp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E8W-5j-1Za"/>
+                        <viewControllerLayoutGuide type="bottom" id="prG-oD-5ll"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XDM-0T-djH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="syncTransfer" image="c1Logo" id="3ts-n7-Cgz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcA-eP-j9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="36"/>
+        </scene>
+        <!--syncRoute-->
+        <scene sceneID="UFS-dS-XVr">
+            <objects>
+                <viewController id="mZr-Ln-0uT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GZP-UK-g1G"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Uh-RW-VSh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4o0-XP-qJY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="syncRoute" image="location-user" id="bII-gB-ogw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4O-Ll-d0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="770"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="c1Logo" width="24" height="24"/>
+        <image name="camera-video" width="24" height="24"/>
+        <image name="location-user" width="24" height="24"/>
+    </resources>
 </document>
