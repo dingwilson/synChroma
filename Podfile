@@ -7,5 +7,8 @@ target 'synChroma' do
 
   # Pods for synChroma
   pod 'SwiftVideoBackground'
+  pod 'SwiftyJSON', '3.0.0'
+  pod 'AFNetworking', '~> 3.0'
+
 
 end
